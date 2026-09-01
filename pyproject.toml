@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "hermes-privacy-guard"
+version = "1.0.0"
+description = "On-device PII detection and redaction plugin for Hermes Agent"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+authors = [
+    {name = "jiushizhu2024"}
+]
+dependencies = [
+    "spacy>=3.7.0",
+    "zh-core-web-sm==3.7.0",
+]
+
+[project.optional-dependencies]
+ml = ["ai4privacy>=0.1.0"]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["privacy-guard*"]

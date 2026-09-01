@@ -1,0 +1,7 @@
+name: privacy-guard
+version: 1.0.0
+description: "On-device PII detection and redaction for all Hermes tool outputs using regex + Ai4Privacy ML model"
+author: sunsword
+hooks:
+  - transform_tool_result
+  - post_tool_call
